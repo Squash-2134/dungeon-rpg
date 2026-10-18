@@ -1,0 +1,58 @@
+{
+    "player_races": {
+        "human": {
+            "name": "Human",
+            "stats": {
+                "max_health": 100,
+                "max_mana": 50,
+                "attack": 10,
+                "defence": 10,
+                "magic_attack": 5,
+                "magic_defence": 5,
+                "speed": 7
+            },
+            "skill": "adaptability"
+        },
+        "elf": {
+            "name": "Elf",
+            "stats": {
+                "max_health": 80,
+                "max_mana": 70,
+                "attack": 8,
+                "defence": 6,
+                "magic_attack": 12,
+                "magic_defence": 8,
+                "speed": 9
+            },
+            "skill": "nature's_blessing"
+        }
+    },
+    "regular_enemy_races": {
+        "goblin": {
+            "name": "Goblin",
+            "stats": {
+                "max_health": 30,
+                "max_mana": 10,
+                "attack": 5,
+                "defence": 5,
+                "magic_attack": 3,
+                "magic_defence": 2,
+                "speed": 8
+            },
+            "skill": "sneak_attack"
+        },
+        "orc": {
+            "name": "Orc",
+            "stats": {
+                "max_health": 50,
+                "max_mana": 5,
+                "attack": 10,
+                "defence": 8,
+                "magic_attack": 2,
+                "magic_defence": 3,
+                "speed": 6
+            },
+            "skill": "berserk"
+        }
+    }
+}
