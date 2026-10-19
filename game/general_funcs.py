@@ -1,6 +1,6 @@
 # imports
 import json
-from game.entities import Race
+from game.entities import Race, PlayerClass
 
 def load_races(filepath, section):
     """
@@ -23,7 +23,17 @@ def load_races(filepath, section):
 def load_classes(filepath):
     """
     function to load class data from a JSON file
+    returns a dict of class_id -> PlayerClass
     """
     with open(filepath, "r", encoding="utf-8") as file:
         data = json.load(file)
-    return data
+
+    classes = {}
+    for class_id, info in data.items():
+        classes[class_id] = PlayerClass(
+            class_id = class_id,
+            name = info["name"],
+            growth_rate = info["growth_rate"],
+            skill_tree = info["skill_tree"]
+        )
+    return classes

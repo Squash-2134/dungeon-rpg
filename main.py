@@ -18,15 +18,18 @@ def main():
             print(f"  {stat_name}: {value}")
         print()
 
+    def print_class(player_class):
+        print(f"--- {player_class.name} ({player_class.class_id}) ---")
+        print(f"Skill tree: {player_class.skill_tree}")
+        for stat_name, rate in player_class.growth_rate.items():
+            print(f"  {stat_name}: {rate}")
+        print()
+
     print_race(regular_enemy_races["goblin"])
     print_race(player_races["human"])
 
-    for class_id, info in classes.items():
-        print(f"--- {info['name']} ({class_id}) ---")
-        print(f"Skill tree: {info['skill_tree']}")
-        for stat_name, rate in info["growth_rate"].items():
-            print(f"  {stat_name}: {rate}")
-        print()
+    for player_class in classes.values():
+        print_class(player_class)
 
 
 if __name__ == "__main__":
