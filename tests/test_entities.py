@@ -19,6 +19,15 @@ class PlayerCharacter:
         print(f"Attack: {self.attack}")
         print(f"Defence: {self.defence}")
 
+    def set_player_name(self):
+        self.name = input("Enter your character's name: ")
+
+    def set_player_race(self):
+        pass
+
+    def create_new_character(self):
+        pass
+
 # Enemy Class
 class Enemy:
     def __init__(self):
