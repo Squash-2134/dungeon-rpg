@@ -1,5 +1,5 @@
 # imports
-from entities import test_player, test_enemy
+from game.entities import test_player, test_enemy
 
 def damage_formula(offesive_stat, defensive_stat, attacker_level):
     dmg = (2 *attacker_level / 5 + 2) * 50 * (offesive_stat / defensive_stat) / 50 + 2

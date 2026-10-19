@@ -1,7 +1,7 @@
 # Imports
 import random
 import math
-from test_class_race import classes
+from tests.test_class_race import classes
 
 # Player Character Class
 class PlayerCharacter:
