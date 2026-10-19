@@ -9,7 +9,9 @@
                 "defence": 10,
                 "magic_attack": 5,
                 "magic_defence": 5,
-                "speed": 7
+                "speed": 7,
+                "luck": 12,
+                "reputation": 15
             },
             "skill": "adaptability"
         },
@@ -22,7 +24,9 @@
                 "defence": 6,
                 "magic_attack": 12,
                 "magic_defence": 8,
-                "speed": 9
+                "speed": 9,
+                "luck": 10,
+                "reputation": 10
             },
             "skill": "nature's_blessing"
         }

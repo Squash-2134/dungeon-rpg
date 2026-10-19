@@ -1,0 +1,28 @@
+{
+    "knight": {
+        "name": "Knight",
+        "growth_rate": {
+            "health": "Medium",
+            "mana": "Medium",
+            "attack": "Fast",
+            "defence": "Fast",
+            "magic_attack": "Slow",
+            "magic_defence": "Medium",
+            "speed": "Medium"
+        },
+        "skill_tree": "knight_skill_tree"
+    },
+    "mage": {
+        "name": "Mage",
+        "growth_rate": {
+            "health": "Slow",
+            "mana": "Fast",
+            "attack": "Slow",
+            "defence": "Slow",
+            "magic_attack": "Fast",
+            "magic_defence": "Medium",
+            "speed": "Medium"
+        },
+        "skill_tree": "mage_skill_tree"
+    }
+}

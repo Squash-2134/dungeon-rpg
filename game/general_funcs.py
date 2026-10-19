@@ -20,3 +20,10 @@ def load_races(filepath, section):
         )
     return races
 
+def load_classes(filepath):
+    """
+    function to load class data from a JSON file
+    """
+    with open(filepath, "r", encoding="utf-8") as file:
+        data = json.load(file)
+    return data
