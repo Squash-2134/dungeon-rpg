@@ -14,3 +14,5 @@
 - The User is then shown a full profile of the character they created, with stats (shown as: stat_name: stat_num (+gear_num)), skills, starting loadout. They are asked to confirm this if not the process repeats.
 
 
+
+
