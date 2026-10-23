@@ -3,8 +3,8 @@
         "human": {
             "name": "Human",
             "stats": {
-                "max_health": 100,
-                "max_mana": 50,
+                "health": 100,
+                "mana": 50,
                 "attack": 10,
                 "defence": 10,
                 "magic_attack": 5,
@@ -18,8 +18,8 @@
         "elf": {
             "name": "Elf",
             "stats": {
-                "max_health": 80,
-                "max_mana": 70,
+                "health": 80,
+                "mana": 70,
                 "attack": 8,
                 "defence": 6,
                 "magic_attack": 12,
@@ -35,8 +35,8 @@
         "goblin": {
             "name": "Goblin",
             "stats": {
-                "max_health": 30,
-                "max_mana": 10,
+                "health": 30,
+                "mana": 10,
                 "attack": 5,
                 "defence": 5,
                 "magic_attack": 3,
@@ -48,8 +48,8 @@
         "orc": {
             "name": "Orc",
             "stats": {
-                "max_health": 50,
-                "max_mana": 5,
+                "health": 50,
+                "mana": 5,
                 "attack": 10,
                 "defence": 8,
                 "magic_attack": 2,
