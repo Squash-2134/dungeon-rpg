@@ -18,9 +18,8 @@ class Player:
         self.current_mana = self.get_stat("mana")
 
     def get_stat(self, stat_name):
-        pass
+        return self.race.base_stats[stat_name] + self.allocated_stat_points[stat_name]
 
     def get_gear_bonus(self, stat_name):
-        pass
+        return 0
 
-    
