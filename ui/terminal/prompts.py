@@ -34,3 +34,13 @@ def ask_yes_no(prompt):
         if answer in ("n", "no"):
             return False
         print("Please enter y or n.")
+
+def choose_with_confirmation(options, kind, show_details):
+    """List -> pick -> show details -> confirm. Used for both races and classes."""
+    items = list(options.values())
+    while True:
+        index = ask_choice(f"Choose your {kind}:", [item.name for item in items])
+        chosen = items[index]
+        show_details(chosen)
+        if ask_yes_no(f"Choose {chosen.name}?"):
+            return chosen
