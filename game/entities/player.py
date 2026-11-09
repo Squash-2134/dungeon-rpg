@@ -23,3 +23,11 @@ class Player:
     def get_gear_bonus(self, stat_name):
         return 0
 
+    def spend_points(self, stat_name, amount):
+        if stat_name not in self.allocated_stat_points:
+            raise ValueError(f"Unknown stat: {stat_name}")
+        if amount < 1 or amount > self.stat_points:
+            raise ValueError("Not enough stat points")
+        self.allocated_stat_points[stat_name] += amount
+        self.stat_points -= amount
+
