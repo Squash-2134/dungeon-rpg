@@ -6,8 +6,8 @@
             "mana": "Medium",
             "attack": "Fast",
             "defence": "Fast",
-            "magic_attack": "Slow",
-            "magic_defence": "Medium",
+            "arcane": "Slow",
+            "wisdom": "Medium",
             "speed": "Medium"
         },
         "skill_tree": "knight_skill_tree"
@@ -19,8 +19,8 @@
             "mana": "Fast",
             "attack": "Slow",
             "defence": "Slow",
-            "magic_attack": "Fast",
-            "magic_defence": "Medium",
+            "arcane": "Fast",
+            "wisdom": "Medium",
             "speed": "Medium"
         },
         "skill_tree": "mage_skill_tree"

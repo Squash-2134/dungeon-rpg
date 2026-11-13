@@ -1,4 +1,4 @@
-STAT_NAMES = ("health", "mana", "attack", "defence", "magic_attack", "magic_defence", "speed", "luck")
+STAT_NAMES = ("health", "mana", "attack", "defence", "arcane", "wisdom", "speed", "luck")
 
 class Player:
     def __init__(self, name, pronouns, race, player_class):

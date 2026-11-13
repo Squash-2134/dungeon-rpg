@@ -7,8 +7,8 @@
                 "mana": 50,
                 "attack": 10,
                 "defence": 10,
-                "magic_attack": 5,
-                "magic_defence": 5,
+                "arcane": 5,
+                "wisdom": 5,
                 "speed": 7,
                 "luck": 12,
                 "reputation": 15
@@ -22,8 +22,8 @@
                 "mana": 70,
                 "attack": 8,
                 "defence": 6,
-                "magic_attack": 12,
-                "magic_defence": 8,
+                "arcane": 12,
+                "wisdom": 8,
                 "speed": 9,
                 "luck": 10,
                 "reputation": 10
@@ -39,8 +39,8 @@
                 "mana": 10,
                 "attack": 5,
                 "defence": 5,
-                "magic_attack": 3,
-                "magic_defence": 2,
+                "arcane": 3,
+                "wisdom": 2,
                 "speed": 8
             },
             "skill": "sneak_attack"
@@ -52,8 +52,8 @@
                 "mana": 5,
                 "attack": 10,
                 "defence": 8,
-                "magic_attack": 2,
-                "magic_defence": 3,
+                "arcane": 2,
+                "wisdom": 3,
                 "speed": 6
             },
             "skill": "berserk"
