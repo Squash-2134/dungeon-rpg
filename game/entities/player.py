@@ -1,4 +1,4 @@
-STAT_NAMES = ("health", "mana", "attack", "defence", "arcane", "wisdom", "speed", "luck")
+STAT_NAMES = ("health", "mana", "strength", "fortitude", "arcane", "wisdom", "speed", "luck")
 
 class Player:
     def __init__(self, name, pronouns, race, player_class):
@@ -31,3 +31,8 @@ class Player:
         self.allocated_stat_points[stat_name] += amount
         self.stat_points -= amount
 
+    def take_damage(self, amount):
+        self.current_health = max(0, self.current_health - amount)
+
+    def is_alive(self):
+        return self.current_health > 0

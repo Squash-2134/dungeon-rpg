@@ -4,8 +4,8 @@
         "growth_rate": {
             "health": "Medium",
             "mana": "Medium",
-            "attack": "Fast",
-            "defence": "Fast",
+            "strength": "Fast",
+            "fortitude": "Fast",
             "arcane": "Slow",
             "wisdom": "Medium",
             "speed": "Medium"
@@ -17,8 +17,8 @@
         "growth_rate": {
             "health": "Slow",
             "mana": "Fast",
-            "attack": "Slow",
-            "defence": "Slow",
+            "strength": "Slow",
+            "fortitude": "Slow",
             "arcane": "Fast",
             "wisdom": "Medium",
             "speed": "Medium"

@@ -5,8 +5,8 @@
             "stats": {
                 "health": 100,
                 "mana": 50,
-                "attack": 10,
-                "defence": 10,
+                "strength": 10,
+                "fortitude": 10,
                 "arcane": 5,
                 "wisdom": 5,
                 "speed": 7,
@@ -20,8 +20,8 @@
             "stats": {
                 "health": 80,
                 "mana": 70,
-                "attack": 8,
-                "defence": 6,
+                "strength": 8,
+                "fortitude": 6,
                 "arcane": 12,
                 "wisdom": 8,
                 "speed": 9,
@@ -37,8 +37,8 @@
             "stats": {
                 "health": 30,
                 "mana": 10,
-                "attack": 5,
-                "defence": 5,
+                "strength": 5,
+                "fortitude": 5,
                 "arcane": 3,
                 "wisdom": 2,
                 "speed": 8
@@ -50,8 +50,8 @@
             "stats": {
                 "health": 50,
                 "mana": 5,
-                "attack": 10,
-                "defence": 8,
+                "strength": 10,
+                "fortitude": 8,
                 "arcane": 2,
                 "wisdom": 3,
                 "speed": 6
