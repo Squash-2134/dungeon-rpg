@@ -12,6 +12,9 @@ def calculate_damage(level, power, strength, fortitude, variance=None):
     - Fortitude is the fortitude stat of the defending entity (Either Fortitude or Wisdom depending on the skill type)
     - Variance is a radomly generated number (to 2 dp) between 0.85 and 1.00
     - Modifier is a composite variable taking into account critical hits, type effectiveness, and other factors
+        - Crit is a 1.5x multiplier to damage if the attack is a critical hit
+        - Type is a multiplier (2x, 1x, 0.5x, 0x) based on the skill's damage type and the target's resistances
+        - AoE skills have a 0.8x multiplier if there are multiple targets hit by the skill
 
     """
     if fortitude <= 0:
