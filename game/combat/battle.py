@@ -1,15 +1,16 @@
 from game.combat.damage import calculate_damage
 from game.combat.events import Attack, Defeated
 
+BASIC_ATTACK_POWER = 50
 
 def resolve_attack(attacker, defender):
     """One basic attack. Returns the events it caused."""
-    raw = calculate_damage(
-        attacker.get_stat("attack"),
-        defender.get_stat("defence"),
+    damage = calculate_damage(
         attacker.level,
+        BASIC_ATTACK_POWER,
+        attacker.get_stat("strength"),
+        defender.get_stat("fortitude"),
     )
-    damage = round(raw)
     defender.take_damage(damage)
 
     events = [Attack(attacker, defender, damage,

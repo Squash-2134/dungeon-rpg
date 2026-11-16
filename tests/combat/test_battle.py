@@ -4,7 +4,7 @@ from game.combat.events import Attack, Defeated
 
 
 def make_race(**overrides):
-    stats = {"health": 100, "mana": 50, "attack": 10, "defence": 10,
+    stats = {"health": 100, "mana": 50, "strength": 10, "fortitude": 10,
              "arcane": 5, "wisdom": 5, "speed": 5, "luck": 5}
     stats.update(overrides)
     return Race("test", "Test", stats, "no_skill")
@@ -23,8 +23,8 @@ def test_attack_reduces_defender_health():
     player, enemy = make_player(), make_enemy()
     events = resolve_attack(player, enemy)
     assert isinstance(events[0], Attack)
-    assert events[0].damage == 4            # round(4.4)
-    assert enemy.current_health == 96
+    assert 3 <= events[0].damage <= 4       # 4.4 * variance, floored
+    assert enemy.current_health == 100 - events[0].damage
 
 
 def test_killing_blow_adds_defeated_event():

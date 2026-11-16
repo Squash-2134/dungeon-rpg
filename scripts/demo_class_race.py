@@ -22,4 +22,4 @@ for player_class in classes.values():
 from game.entities import Player, Enemy
 p = Player("Test", "they", player_races["human"], classes["knight"])
 e = Enemy(regular_enemy_races["goblin"], 5)
-print(p.name, p.get_stat("attack"), e.name, e.get_stat("attack"))
+print(p.name, p.get_stat("strength"), e.name, e.get_stat("strength"))

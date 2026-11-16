@@ -12,3 +12,9 @@ class Enemy:
 
     def get_stat(self, stat_name):
         return self.race.base_stats[stat_name]
+
+    def take_damage(self, amount):
+        self.current_health = max(0, self.current_health - amount)
+
+    def is_alive(self):
+        return self.current_health > 0
