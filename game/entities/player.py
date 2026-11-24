@@ -9,7 +9,7 @@ class Player:
         self.level = 1
 
         self.stat_points = 10
-        self.allocated_stat_points = {stat: 0 for stat in SPENDABLE_STATS}
+        self.allocated_stat_points = {stat: 0 for stat in PLAYER_STATS}
 
         self.unlocked_nodes = set() # Skill tree to fill out later
         self.gear = {} # Gear to fill out later
