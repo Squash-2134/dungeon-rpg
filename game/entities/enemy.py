@@ -16,5 +16,8 @@ class Enemy:
     def take_damage(self, amount):
         self.current_health = max(0, self.current_health - amount)
 
+    def restore_mana(self, amount):
+        self.current_mana = min(self.get_stat("mana"), self.current_mana + amount)
+
     def is_alive(self):
         return self.current_health > 0
