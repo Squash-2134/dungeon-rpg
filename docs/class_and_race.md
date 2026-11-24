@@ -6,6 +6,7 @@
     - each level the player would receive x amount of stat points to spend
     - every 5 (or 10 undecided yet) levels all stats would increase  by a set certain amount of stat points (likely 2-5), thin k of this as general growth along the journey
     - track the amount spent in each stat and have diminishing returns at set ranges
+    - Luck and Reputation are out of combat stats and as such they dont have growth rates.
 
 ## Races
 - Base stats

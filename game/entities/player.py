@@ -1,4 +1,4 @@
-STAT_NAMES = ("health", "mana", "strength", "fortitude", "arcane", "wisdom", "speed", "luck")
+from game.stats import PLAYER_STATS, SPENDABLE_STATS
 
 class Player:
     def __init__(self, name, pronouns, race, player_class):
@@ -9,7 +9,7 @@ class Player:
         self.level = 1
 
         self.stat_points = 10
-        self.allocated_stat_points = {stat: 0 for stat in STAT_NAMES}
+        self.allocated_stat_points = {stat: 0 for stat in SPENDABLE_STATS}
 
         self.unlocked_nodes = set() # Skill tree to fill out later
         self.gear = {} # Gear to fill out later
@@ -24,8 +24,8 @@ class Player:
         return 0
 
     def spend_points(self, stat_name, amount):
-        if stat_name not in self.allocated_stat_points:
-            raise ValueError(f"Unknown stat: {stat_name}")
+        if stat_name not in SPENDABLE_STATS:
+            raise ValueError(f"Can't spend points on: {stat_name}")
         if amount < 1 or amount > self.stat_points:
             raise ValueError("Not enough stat points")
         self.allocated_stat_points[stat_name] += amount

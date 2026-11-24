@@ -1,5 +1,5 @@
 from game.entities import Player
-from game.entities.player import STAT_NAMES
+from game.stats import SPENDABLE_STATS
 from ui.terminal.display import print_race, print_class, print_profile
 from ui.terminal.prompts import (
     ask_text, ask_choice, ask_int, ask_yes_no, choose_with_confirmation
@@ -12,8 +12,8 @@ PRONOUN_OPTIONS = {"He": "he", "She": "she", "Neutral": "they"}
 def spend_stat_points(player):
     while player.stat_points > 0:
         print(f"\nPoints left: {player.stat_points}")
-        labels = [f"{stat} ({player.get_stat(stat)})" for stat in STAT_NAMES]
-        stat = STAT_NAMES[ask_choice("Add points to which stat?", labels)]
+        labels = [f"{stat} ({player.get_stat(stat)})" for stat in SPENDABLE_STATS]
+        stat = SPENDABLE_STATS[ask_choice("Add points to which stat?", labels)]
         amount = ask_int(f"How many points to {stat}?", 1, player.stat_points)
         player.spend_points(stat, amount)
 

@@ -1,4 +1,4 @@
-from game.entities.player import STAT_NAMES
+from game.stats import PLAYER_STATS
 
 def print_class(player_class):
         print(f"--- {player_class.name} ({player_class.class_id}) ---")
@@ -17,7 +17,7 @@ def print_race(race):
 def print_profile(player):
     print(f"\n=== {player.name} ({player.pronouns}) ===")
     print(f"Race: {player.race.name}   Class: {player.player_class.name}   Level: {player.level}")
-    for stat in STAT_NAMES:
+    for stat in PLAYER_STATS:
         print(f"  {stat}: {player.get_stat(stat)} (+{player.get_gear_bonus(stat)})")
     print(f"Race skill: {player.race.skill_id}")
     print(f"Skill tree: {player.player_class.skill_tree}")

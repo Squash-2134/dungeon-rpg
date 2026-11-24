@@ -1,7 +1,7 @@
 import pytest
 from game.combat.damage import calculate_damage
 
-# calculate_damage(level, power, attack, defence, variance=None)
+# calculate_damage(level, power, strength, fortitude, variance=None)
 # variance=1.0 removes the randomness so results are predictable
 
 
@@ -17,7 +17,7 @@ def test_higher_level_means_more_damage():
     assert calculate_damage(10, 50, 10, 10, variance=1.0) > calculate_damage(1, 50, 10, 10, variance=1.0)
 
 
-def test_zero_defence_is_rejected():
+def test_zero_fortitude_is_rejected():
     with pytest.raises(ValueError):
         calculate_damage(1, 50, 10, 0)
 
