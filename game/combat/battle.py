@@ -76,13 +76,3 @@ def run_round(player, enemy, player_action, enemy_action):
         else:
             events += resolve_defend(actor)
     return events
-
-
-def run_battle(player, enemy):
-    """Auto-battle where both sides only attack. Returns a list of events.
-    Kept for now so the old demo still works; it will be replaced by a
-    player-driven loop on the screen side in session 2."""
-    events = []
-    while player.is_alive() and enemy.is_alive():
-        events += run_round(player, enemy, ATTACK, ATTACK)
-    return events

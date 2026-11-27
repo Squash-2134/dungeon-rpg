@@ -1,8 +1,10 @@
+import random
+
 import pytest
 
 from game.entities import Player, Enemy, Race, PlayerClass
-from game.combat.actions import ATTACK, DEFEND
-from game.combat.battle import resolve_attack, resolve_defend, run_round, run_battle
+from game.combat.actions import ATTACK, DEFEND, ALL_ACTIONS
+from game.combat.battle import resolve_attack, resolve_defend, run_round
 from game.combat.events import Attack, Defend, Defeated
 
 
@@ -38,23 +40,30 @@ def test_killing_blow_adds_defeated_event():
 
 
 def test_battle_ends_with_exactly_one_loser():
+    # Both sides pick random actions, round after round, until someone falls
     player, enemy = make_player(), make_enemy()
-    events = run_battle(player, enemy)
+    events = []
+    for _ in range(1000):                   # safety limit so a bug can't loop forever
+        if not (player.is_alive() and enemy.is_alive()):
+            break
+        events += run_round(player, enemy,
+                            random.choice(ALL_ACTIONS), random.choice(ALL_ACTIONS))
     assert player.is_alive() != enemy.is_alive()
     assert isinstance(events[-1], Defeated)
 
 
 def test_faster_character_attacks_first():
-    events = run_battle(make_player(speed=10), make_enemy(speed=5))
+    events = run_round(make_player(speed=10), make_enemy(speed=5), ATTACK, ATTACK)
     assert events[0].attacker.name == "Hero"
 
-    events = run_battle(make_player(speed=5), make_enemy(speed=10))
+    events = run_round(make_player(speed=5), make_enemy(speed=10), ATTACK, ATTACK)
     assert events[0].attacker.name == "Test"
 
 
 def test_speed_tie_goes_to_player():
-    events = run_battle(make_player(speed=5), make_enemy(speed=5))
+    events = run_round(make_player(speed=5), make_enemy(speed=5), ATTACK, ATTACK)
     assert events[0].attacker.name == "Hero"
+
 
 # ---------- Rounds, Attack and Defend ----------
 
